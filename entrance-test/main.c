@@ -4,7 +4,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include "main.h"
+#include "functions.h"
 
 int main()
 {
@@ -19,13 +19,13 @@ int main()
     printf("\n---------------------input---------------------\n");
 
     printf("input str  : ");
-    gets(str);
-    // scanf("%255s", str);
-    // gets_s(str, 255);
+    //gets(str);
+    gets_s(str, 255);
     printf("\n\n");
 
     printf("input char : ");
-    scanf("%1c", &c);
+    c = getchar();
+    //scanf("%1c", &c);
     printf("\n\n");
 
     printf("\n--------------------process--------------------\n");
@@ -51,46 +51,3 @@ int main()
 }
 
 
-/**
- * @brief function return only words starting with input char
- * 
- * @param str     - input str 
- * @param ch      - input char 
- * @return char*  new_str (processing str)
- */
-char* str_processing(char* str, char ch)
-{
-    char *new_str;
-    new_str = (char*) malloc(255 * sizeof(char*));
-
-    int i = 0; // index old str
-    int j = 0; // index new str
-    while(str[i] != '\0')
-    {
-        if(str[i] == ch)
-        {
-            while (str[i] != ' ' && str[i] != '\0')
-            {
-                // copy word
-                new_str[j] = str[i];
-                i++;
-                j++;
-            }
-            new_str[j] = ' ';
-            j++;
-        }
-        else
-        {
-            i++;
-            while (str[i] != ' ' && str[i] != '\0')
-            {
-                // skip word
-                i++;
-            }
-            i++;
-        }
-    }
-    new_str[j] = '\0';
-
-    return new_str;
-}
