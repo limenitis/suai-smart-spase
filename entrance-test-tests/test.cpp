@@ -48,5 +48,20 @@ namespace str_tests{
 
 		EXPECT_STREQ("sadad sada s#@$2fsd^* sgs ", str_processing("      sadad \\0 sada dwewd   weg    s#@$2fsd^*   %$@^dfsd  GE$#627i356hte \\0 \\4 53 \\f sgs   ", 's'));
 	}
+
+	TEST(TestStrFunctions, Empty_Str) {
+
+		EXPECT_STREQ("", str_processing("\0", 's'));
+	}
+
+	TEST(TestStrFunctions, One_Symbol_With_Return_Str) {
+
+		EXPECT_STREQ("s ", str_processing("s", 's'));
+	}
+
+	TEST(TestStrFunctions, One_Symbol_Without_Return_Str) {
+
+		EXPECT_STREQ("", str_processing("d", 's'));
+	}
 }
 
