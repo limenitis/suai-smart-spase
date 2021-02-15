@@ -19,13 +19,11 @@ int main()
     printf("\n---------------------input---------------------\n");
 
     printf("input str  : ");
-    //gets(str);
     gets_s(str, 255);
     printf("\n\n");
 
     printf("input char : ");
     c = getchar();
-    //scanf("%1c", &c);
     printf("\n\n");
 
     printf("\n--------------------process--------------------\n");
