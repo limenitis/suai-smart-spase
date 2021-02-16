@@ -4,6 +4,9 @@
 
 namespace str_tests{
 
+	TEST(TestStrFunctions, Test_Tests) {
+		EXPECT_EQ(1,1,);
+	}
 	TEST(TestStrFunctions, Simple_Test) {
 			
 		EXPECT_STREQ("dddddd ", str_processing("dddddd", 'd'));

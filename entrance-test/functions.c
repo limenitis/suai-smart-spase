@@ -10,8 +10,6 @@
  */
 char* str_processing(char* str, char ch)
 {
-    char *new_str;
-    new_str = (char*) malloc(255 * sizeof(char*));
 
     int i = 0; // index old str
     int j = 0; // index new str
@@ -24,11 +22,11 @@ char* str_processing(char* str, char ch)
             while (str[i] != ' ' && str[i] != '\0')
             {
                 // copy word
-                new_str[j] = str[i];
+                str[j] = str[i];
                 i++;
                 j++;
             }
-            new_str[j] = ' ';
+            str[j] = ' ';
             j++;
         }
         else
@@ -40,7 +38,7 @@ char* str_processing(char* str, char ch)
             }
         }
     }
-    new_str[j] = '\0';
+    str[j] = '\0';
 
-    return new_str;
+    return str;
 }

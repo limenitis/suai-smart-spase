@@ -39,7 +39,6 @@ int main()
     printf("result     : ");
     char *new_str = str_processing(str, c);
     printf(new_str);
-    free(new_str);
     printf("\n");
 
     printf("\n----------------------end----------------------\n");
