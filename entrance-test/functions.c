@@ -10,7 +10,6 @@
  */
 char* str_processing(char* str, char ch)
 {
-
     int i = 0; // index old str
     int j = 0; // index new str
     while(str[i] != '\0')
