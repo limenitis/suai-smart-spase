@@ -28,8 +28,8 @@ namespace str_tests{
 	// saf ryhrw f sdr4    dqdq         
 	char Spaces_In_End_str[] = { 's', 'a', 'f', ' ', 'r', 'y', 'h', 'r', 'w', ' ', 'f', ' ', 's', 'd', 'r', '4', ' ', ' ', ' ', ' ', 'd', 'q', 'd', 'q', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '\0' };
 	
-	// ad%2%2fg4 \\ewfxew dw$dw 0 d%qdt ge$@g35
-	char Consist_Special_Symbols_str[] = { 'a', 'd', '%', '2', '%', '2', 'f', 'g', '4', ' ', '\\', '0', 'e', 'w', 'f', 'x', 'e', 'w', ' ', 'd', 'w', '$', 'd', 'w', ' ', '0', ' ', 'd', ' % ', 'q', 'd', 't', ' ', 'g', 'e', '$', '@', 'g', '3', '5', '\0'};
+	// sad#$!d d#4$12@ f#@525#& &*#@! d$12#
+	char Consist_Special_Symbols_str[] = { 's', 'a', 'd', '#', '$', '!', 'd', ' ', 'd', '#', '4', '$', '1', '2', '@', ' ', 'f', '#', '@', '5', '2', '5', '#', '&', ' ', '&', '*', '#', '@', '!', ' ', 'd', '$', '1', '2', '#', '\0'};
 
 	// \0
 	char Empty_Str_str[] = {'\0'};
@@ -82,7 +82,7 @@ namespace str_tests{
 
 	TEST(TestStrFunctions, Consist_Special_Symbols) {
 
-		EXPECT_STREQ("dw$dw ", str_processing(Consist_Special_Symbols_str, 'd'));
+		EXPECT_STREQ("d#4$12@ d$12# ", str_processing(Consist_Special_Symbols_str, 'd'));
 	}
 
 	TEST(TestStrFunctions, Empty_Str) {
