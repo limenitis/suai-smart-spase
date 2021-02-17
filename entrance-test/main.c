@@ -19,7 +19,7 @@ int main()
     printf("\n---------------------input---------------------\n");
 
     printf("input str  : ");
-    gets_s(str, 255);
+    scanf("%255[^\n]",str);
     printf("\n\n");
 
     printf("input char : ");
